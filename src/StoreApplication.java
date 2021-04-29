@@ -1,5 +1,7 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class StoreApplication extends Application {
@@ -8,8 +10,10 @@ public class StoreApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("store.fxml"));
-
-        // Add code here to load the root node from the FXML file // and show it
-
+        Parent root = loader.load();
+        stage.setTitle("Store");
+        stage.setScene(new Scene(root));
+        stage.sizeToScene();
+        stage.show();
         }
 }
