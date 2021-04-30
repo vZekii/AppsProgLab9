@@ -1,14 +1,19 @@
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.ReadOnlyDoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
+
 public class CashRegister implements ProductObserver {
-    private double cash;
+    private final DoubleProperty cash = new SimpleDoubleProperty();
 
     public CashRegister() {
-        cash = 0.0;
+        cash.set(0.0);
     }
 
-    public String getCash() { return "$" + cash; }
+    public final ReadOnlyDoubleProperty cashProperty() { return cash; }
+    public double getCash() { return cash.get(); }
 
     public void add(double money) {
-        cash = cash + money;
+        cash.set(cash.get() + money);
     }
 
     @Override

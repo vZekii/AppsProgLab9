@@ -15,5 +15,5 @@ public class StoreApplication extends Application {
         stage.setScene(new Scene(root));
         stage.sizeToScene();
         stage.show();
-        }
+    }
 }

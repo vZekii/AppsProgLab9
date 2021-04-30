@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
 
 <GridPane fx:controller="StoreController"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
-          styleClass="root">
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 
     <Label text="Product" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-    <Text fx:id="nameTxt" text="${controller.store.product.name}" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Text text="${controller.store.product.name}" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
     <Label text="Stock" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
     <Text fx:id="stockTxt" text="${controller.store.product.stock}" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
     <Label text="Price" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
@@ -23,6 +19,6 @@
         <Button fx:id="sellBtn" text="Sell" onAction="#handleSell" />
     </HBox>
     <Label text="Cash" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
-    <Text fx:id="cashTxt" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <Text fx:id="cashTxt" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
 
 </GridPane>
